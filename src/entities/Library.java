@@ -29,11 +29,29 @@ public class Library {
 		usuarios.add(usuario);
 	}
 	
-	public void listarLivrosDisponivel() {
+	public User buscarUsuarioPorId(int id) {
+		for(User u : usuarios) {
+			if(u.getId() == id) {
+				return u;
+			}
+		}
+		return null;
+	}
+	
+	public Books buscarLivroPorTitulo(String titulo) {
+		for(Books l : livros) {
+			if(l.getTitulo() == titulo) {
+				return l;
+			}
+		}
+		return null;
+	}
+	
+	public void listarLivrosDisponiveis() {
 		System.out.println("Livros disponíveis:");
 		for(Books l : livros) {
 			if(l.isDisponivel()) {
-				System.out.printf("- ", l);
+				System.out.println("- " + l.getTitulo() + "(autor: " + l.getAutor() + ")");
 			}
 		}
 	}

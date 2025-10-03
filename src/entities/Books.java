@@ -48,15 +48,15 @@ public class Books {
 	public void emprestar() {
 		if(disponivel) {
 			disponivel = false;
-			System.out.printf("Livro \"" , titulo, "emprestado com sucesso!\"");
+			System.out.printf("Livro \"%s\" emprestado com sucesso!%n", titulo);
 		}else {
-			System.out.printf("Livro \"" , titulo, "não está disponivel.\"");
+			System.out.printf("Livro \"%s\" não está disponível.%n", titulo);
 		}
 	}
 	
 	public void devolver() {
 		disponivel = true;
-		System.out.printf("Livro \"" , titulo, "devolvido com sucesso!.\"");
+		System.out.printf("Livro \"%s\" devolvido com sucesso!%n", titulo);
 	}
 	
 	@Override
