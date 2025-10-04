@@ -40,7 +40,7 @@ public class Library {
 	
 	public Books buscarLivroPorTitulo(String titulo) {
 		for(Books l : livros) {
-			if(l.getTitulo() == titulo) {
+			if(l.getTitulo().equalsIgnoreCase(titulo)) {
 				return l;
 			}
 		}
